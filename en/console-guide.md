@@ -107,8 +107,6 @@ You can manage record sets of the DNS Zone selected on the **DNS** screen of the
 
 2. You can view the query information and average response time of the record set for the last seven days.
 
-![image_09_20210604](https://static.toastoven.net/prod_dnsplus/image_09_20210604.png)
-
 ### Search Record Sets and View Results
 
 1. You can view only the record set type selected using the **Type filter**.

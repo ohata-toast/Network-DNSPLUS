@@ -521,7 +521,7 @@ curl -X POST 'https://dnsplus.api.gov-nhncloudservice.com/dnsplus/v1.0/appkeys/{
         - 수식자의 기본값은 '+'이며 메커니즘에 따라 IP, 도메인 이름 등을 추가로 입력합니다.
             - 형태: "v=spf1 {수식자}{메커니즘}{내용} {변경자}={내용}"
             - 수식자: '+'(Pass), '-'(Fail), '~'(Soft Fail), '?'(Neutral)
-            - 메커니즘: all, include, a, mx, prt, ip4, ip6, exists
+            - 메커니즘: all, include, a, mx, ptr, ip4, ip6, exists
             - 변경자: redirect, exp, 사용자 지정
             - (예제)
                 - "v=spf1 mx -all"
@@ -531,7 +531,7 @@ curl -X POST 'https://dnsplus.api.gov-nhncloudservice.com/dnsplus/v1.0/appkeys/{
 
 | 이름 | 타입 | 유효 범위 | 필수 여부 | 기본값 | 설명 |
 |---|---|---|---|---|---|
-| recordset.recordList[0].stringValue | String | 최대 255바이트(인용부포 포함) | 필수 |  | 텍스트 내용 |
+| recordset.recordList[0].stringValue | String | 최대 255바이트(인용부호 포함) | 필수 |  | 텍스트 내용 |
 
 
 - SRV 레코드 세트
@@ -1825,7 +1825,7 @@ curl -X PUT 'https://dnsplus.api.gov-nhncloudservice.com/dnsplus/v1.0/appkeys/{a
 
 ### 헬스 체크 삭제
 
-- 여러 개의 헬스 세트를 삭제합니다.
+- 여러 개의 헬스 체크를 삭제합니다.
 - Pool에 연결되어 있는 헬스 체크는 삭제할 수 없습니다.
 
 #### 요청

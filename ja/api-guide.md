@@ -521,7 +521,7 @@ curl -X POST 'https://dnsplus.api.nhncloudservice.com/dnsplus/v1.0/appkeys/{appk
         - 修飾子のデフォルト値は'+'で、メカニズムによってIP、ドメイン名などを追加で入力します。
             - 形式："v=spf1 {修飾子}{メカニズム}{内容} {変更者}={内容}"
             - 修飾子: '+'(Pass), '-'(Fail), '~'(Soft Fail), '?'(Neutral)
-            - メカニズム：all、include、a、mx、prt、ip4、ip6、exists
+            - メカニズム：all、include、a、mx、ptr、ip4、ip6、exists
             - 変更者：redirect、exp、ユーザー指定
             - (例)
                 - "v=spf1 mx -all"

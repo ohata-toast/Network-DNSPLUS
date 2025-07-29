@@ -521,7 +521,7 @@ curl -X POST 'https://dnsplus.api.nhncloudservice.com/dnsplus/v1.0/appkeys/{appk
         - The default value of the qualifier is '+', and you can add IP or domain name depending on the mechanism.
             - Format: "v=spf1 {qualifier}{mechanism}{content} {modifier}={content}"
             - qualifier: '+'(Pass), '-'(Fail), '~'(Soft Fail), '?'(Neutral)
-            - mechanism: all, include, a, mx, prt, ip4, ip6, exists
+            - mechanism: all, include, a, mx, ptr, ip4, ip6, exists
             - modifier: redirect, exp, custom
             - (Example)
                 - "v=spf1 mx -all"

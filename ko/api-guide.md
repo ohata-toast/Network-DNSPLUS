@@ -382,6 +382,7 @@ curl -X GET 'https://dnsplus.api.nhncloudservice.com/dnsplus/v1.0/appkeys/{appke
 - **레코드 세트 타입**으로 A, AAAA, CAA, CNAME, MX, NAPTR, PTR, TXT, SRV, NS, SOA를 지원합니다.
 - SOA 레코드 세트는 생성, 수정, 삭제할 수 없으며, NS 레코드 세트는 **DNS Zone 이름**으로 생성, 수정, 삭제할 수 없습니다.
 - 레코드 세트 내의 레코드 목록의 길이는 최대 512바이트입니다.
+  - TXT 레코드 세트는 최대 4096바이트입니다.
 - DNS Zone당 레코드 세트는 최대 5,000개까지 생성할 수 있습니다.
 - 레코드 세트 생성 개수는 제한되어 있으며 연장이 필요한 경우 별도로 문의해 주시기 바랍니다. [1:1 문의](https://www.toast.com/kr/support/inquiry?alias=tab3_02)
 
@@ -529,9 +530,9 @@ curl -X POST 'https://dnsplus.api.nhncloudservice.com/dnsplus/v1.0/appkeys/{appk
                 - "v=spf1 a:toast.com -all"
                 - "v=spf1 redirect=toast.com"
 
-| 이름 | 타입 | 유효 범위 | 필수 여부 | 기본값 | 설명 |
-|---|---|---|---|---|---|
-| recordset.recordList[0].stringValue | String | 최대 255바이트(인용부호 포함) | 필수 |  | 텍스트 내용 |
+| 이름 | 타입 | 유효 범위               | 필수 여부 | 기본값 | 설명 |
+|---|---|---------------------|---|---|---|
+| recordset.recordList[0].stringValue | String | 최대 4096바이트(인용부호 포함) | 필수 |  | 텍스트 내용 |
 
 
 - SRV 레코드 세트
@@ -593,6 +594,7 @@ curl -X POST 'https://dnsplus.api.nhncloudservice.com/dnsplus/v1.0/appkeys/{appk
 - **레코드 세트 타입**으로 A, AAAA, CAA, CNAME, MX, NAPTR, PTR, TXT, SRV, NS, SOA를 지원합니다.
 - SOA 레코드 세트는 생성, 수정, 삭제할 수 없으며, NS 레코드 세트는 **DNS Zone 이름**으로 생성, 수정, 삭제할 수 없습니다.
 - 레코드 세트 내의 레코드 목록의 길이는 최대 512바이트입니다.
+  - TXT 레코드 세트는 최대 4096바이트입니다.
 - DNS Zone당 레코드 세트는 최대 5,000개까지 생성할 수 있습니다.
 - 레코드 세트 생성 개수는 제한되어 있으며 연장이 필요한 경우 별도로 문의해 주시기 바랍니다. [1:1 문의](https://www.toast.com/kr/support/inquiry?alias=tab3_02)
 
@@ -651,6 +653,7 @@ curl -X POST 'https://dnsplus.api.nhncloudservice.com/dnsplus/v1.0/appkeys/{appk
 - **레코드 세트 이름**은 수정할 수 없으며, **레코드 세트 타입**과 **TTL(초)**, **레코드값**은 수정할 수 있습니다.
 - SOA 레코드 세트는 생성, 수정, 삭제할 수 없으며, NS 레코드 세트는 **DNS Zone 이름**으로 생성, 수정, 삭제할 수 없습니다.
 - 레코드 세트 내의 레코드 목록의 길이는 최대 512바이트입니다.
+  - TXT 레코드 세트는 최대 4096바이트입니다.
 
 #### 요청
 

@@ -382,6 +382,7 @@ curl -X GET 'https://dnsplus.api.nhncloudservice.com/dnsplus/v1.0/appkeys/{appke
 - **レコードセットタイプ**としてA、AAAA、CAA、CNAME、MX、NAPTR、PTR、TXT、SRV、NS、SOAをサポートします。
 - SOAレコードセットは、作成、修正、削除できず、NSレコードセットは、**DNS Zone名**で作成、修正、削除できません。
 - レコードセット内のレコードリストの長さは、最大512バイトです。
+  - TXTレコードセットは最大4096バイトです。
 - DNS Zoneつ当たり、レコードセットは最大5,000個まで作成できます。
 - レコードセットの作成数は制限されています。拡張が必要な場合は別途お問い合わせください。[1:1お問い合わせ](https://www.toast.com/kr/support/inquiry?alias=tab3_02)
 
@@ -530,8 +531,8 @@ curl -X POST 'https://dnsplus.api.nhncloudservice.com/dnsplus/v1.0/appkeys/{appk
                 - "v=spf1 redirect=toast.com"
 
 | 名前 | タイプ | 有効範囲 | 必須かどうか | デフォルト値 | 説明 |
-|---|---|---|---|---|---|
-| recordset.recordList[0].stringValue | String | 最大255バイト(引用符号含む) | 必須 |  | テキスト内容 |
+|---|---|---------------------|---|---|---|
+| recordset.recordList[0].stringValue | String | 最大4096バイト(引用符号含む) | 必須 |  | テキスト内容 |
 
 
 - SRVレコードセット
@@ -593,6 +594,7 @@ curl -X POST 'https://dnsplus.api.nhncloudservice.com/dnsplus/v1.0/appkeys/{appk
 - **レコードセットタイプ**は、A、AAAA、CAA、CNAME、MX、NAPTR、PTR、TXT、SRV、NS、SOAをサポートします。
 - SOAレコードセットは、作成、修正、削除できず、NSレコードセットは、**DNS Zone名**で作成、修正、削除できません。
 - レコードセット内のレコードリストの長さは、最大512バイトです。
+  - TXTレコードセットは最大4096バイトです。
 - DNS Zoneごとにレコードセットは、最大5,000個まで作成できます。
 - レコードセット作成数は、制限されており、数を増やしたい場合は、別途お問い合わせください。 [1:1お問い合わせ](https://www.toast.com/kr/support/inquiry?alias=tab3_02)
 
@@ -651,7 +653,8 @@ curl -X POST 'https://dnsplus.api.nhncloudservice.com/dnsplus/v1.0/appkeys/{appk
 - **レコードセット名**は修正できず、**レコードセットタイプ**と**TTL(秒)**、**レコード値**は修正できます。
 - SOAレコードセットは作成、修正、削除できず、NSレコードセットは**DNS Zone名**で作成、修正、削除できません。
 - レコードセット内のレコードリストの長さは、最大512バイトです。
-
+  - TXTレコードセットは最大4096バイトです。
+  
 #### リクエスト
 
 [URI]
